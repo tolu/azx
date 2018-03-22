@@ -21,7 +21,8 @@
   },
   "files": [
     "index.js",
-    "az.js"
+    "az.js",
+    "loading.js"
   ],
   "bin": {
     "azx": "./index.js"
