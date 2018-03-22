@@ -1,7 +1,15 @@
+const {platform} = require('os');
 const path = require('path');
-const {spawn} = require('child_process');
+const {spawn, spawnSync} = require('child_process');
 
-const cmd = path.join('c:', 'Program Files (x86)', 'Microsoft SDKs', 'Azure', 'CLI2', 'wbin', 'az.cmd');
+let cmd = 'az';
+if (platform() === 'win32') {
+  // HACK: must figure out why it does not work to run az when in path...
+  // fails in git bash AND regular cmd
+  cmd = path.join('c:', 'Program Files (x86)', 'Microsoft SDKs', 'Azure', 'CLI2', 'wbin', 'az.cmd');
+} else if (!spawnSync('which', ['az'])) {
+  throw new Error('Could not found "az" in path...');
+}
 
 const setSubscription = async subscription => {
   await execFn(['account', 'set', '-s', subscription.id]);
