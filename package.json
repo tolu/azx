@@ -1,0 +1,44 @@
+{
+  "name": "azx",
+  "version": "0.0.1",
+  "description": "interactive cli helper tool for azure cli (az)",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "keywords": [
+    "azure cli",
+    "nodejs",
+    "interactive"
+  ],
+  "author": "Tobias Lundin <tobias.lundin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "clui": "^0.3.6",
+    "commander": "^2.15.1",
+    "inquirer": "^5.1.0",
+    "semver-sort": "0.0.4"
+  },
+  "files": [
+    "index.js",
+    "az.js"
+  ],
+  "bin": {
+    "azx": "./index.js"
+  },
+  "devDependencies": {
+    "xo": "^0.20.3"
+  },
+  "xo": {
+    "semicolon": true,
+    "space": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tolu/azx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tolu/azx/issues"
+  },
+  "homepage": "https://github.com/tolu/azx#readme"
+}
