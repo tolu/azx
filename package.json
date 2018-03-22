@@ -1,6 +1,6 @@
 {
   "name": "azx",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "interactive cli helper tool for azure cli (az)",
   "main": "index.js",
   "scripts": {
