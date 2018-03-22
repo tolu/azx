@@ -1,3 +1,6 @@
+[![npm version](https://badge.fury.io/js/azx.svg)](https://www.npmjs.com/package/azx) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://tolu.mit-license.org/)
+
+
 # azx
 Interactive cli helper for Azure CLI 2
 
