@@ -9,9 +9,6 @@ Implements interactive flows for selecting data (just `show-tags` right now)
 
 You'll need to have [`az`](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) installed in path
 
-> There are som issues that needs to be solved here on windows  
-> where I have to set the command to the absolute path...
-
 ## Install
 
 ```
