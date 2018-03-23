@@ -47,8 +47,10 @@ List tags in acr repository
 ## Dependencies
 
  - [commander](https://www.npmjs.com/package/commander) - solution for building node.js cli
- - [inquirer](https://www.npmjs.com/package/inquirer) - interactive cli lists
+ - [inquirer](https://www.npmjs.com/package/inquirer) - interactive cli prompts
  - [clui](https://www.npmjs.com/package/clui) - cli spinner
+ - [execa](https://www.npmjs.com/package/execa) - a better `child_process`
+ - [semver-sort](https://www.npmjs.com/package/semver-sort) - for sorting image tags
 
 ## Inspiration
 
