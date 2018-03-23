@@ -22,7 +22,6 @@ program.name('azx');
 program
   .version(version, '-v, --version')
   .usage('[command] [options]')
-  .option('-d, --debug', 'verbose output', false)
   .description('Interactive <az> helper');
 
 program
