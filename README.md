@@ -30,13 +30,13 @@ $ azx -h
   Options:
 
     -v, --version       output the version number
-    -d, --debug         verbose output
     -h, --help          output usage information
 
   Commands:
 
     set-subscription|s  select az subscription
     get-tags|gt         list tags for image in acr
+    interactive|i       select from available commands interactively
 ```
 
 ### What it looks like
