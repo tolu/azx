@@ -1,5 +1,8 @@
 const execa = require('execa');
 
+// must use az.cmd on windows
+const command = process.platform.startsWith('win') ? 'az.cmd' : 'az';
+
 const setSubscription = async subscription => {
   await execFn(['account', 'set', '-s', subscription.id]);
   console.log('Subscription set to', subscription.id);
@@ -47,7 +50,6 @@ const getRepositoryTags = async (acrName, repository) => {
   return JSON.parse(stdout);
 };
 
-const command = process.platform.startsWith('win') ? 'az.cmd' : 'az';
 async function execFn(args) {
   return await execa.stdout(command, args);
 }
