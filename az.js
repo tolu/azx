@@ -1,7 +1,4 @@
-const path = require('path');
-const {spawn} = require('child_process');
-
-const cmd = path.join('c:', 'Program Files (x86)', 'Microsoft SDKs', 'Azure', 'CLI2', 'wbin', 'az.cmd');
+const execa = require('execa');
 
 const setSubscription = async subscription => {
   await execFn(['account', 'set', '-s', subscription.id]);
@@ -50,17 +47,9 @@ const getRepositoryTags = async (acrName, repository) => {
   return JSON.parse(stdout);
 };
 
-function execFn(args) {
-  let response = '';
-  return new Promise((resolve, reject) => {
-    // Console.log(`Spawn: "az ${args.join(' ')}"`)
-    const p = spawn(cmd, args);
-    p.stderr.on('data', reject);
-    p.stdout.on('data', data => {
-      response += data;
-    });
-    p.on('close', () => resolve(response.trim()));
-  });
+const command = process.platform.startsWith('win') ? 'az.cmd' : 'az';
+async function execFn(args) {
+  return await execa.stdout(command, args);
 }
 
 module.exports = {
